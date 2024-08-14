@@ -1,0 +1,147 @@
+
+html{
+    background-color: #E0DFEE;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 400;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #FFFFFF;
+}
+
+li {
+    cursor: pointer;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 600;
+}
+
+.navbar {
+    margin: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.logoBox {
+    cursor: pointer;
+}
+
+.navbarOptionBox {
+    display: flex;
+}
+
+.navbarOption {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navbar3magesBox {
+    display: flex;
+}
+
+.navbar3mages {
+    cursor: pointer;
+    margin: 0 25px;
+}
+
+
+.body {
+    margin: 0;
+    height: 698px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../assets/bodySunglass.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.18;
+    z-index: -1;
+}
+
+.bodyBox {
+    width: 560px;
+}
+.emailInputBox, .passwordInputBox {
+    display: flex;
+    justify-content: center;
+}
+.passwordInputBox{
+    margin-top: 20px;
+}
+.passwordInput, .emailInput{
+    font-size: 16px!important;
+}
+
+.loginButton{
+    cursor: pointer;
+}
+.googleButton, .emailInput, .passwordInput, .loginButton {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    border: 1px solid #ADA4A4;
+    border-radius: 10px;
+    background-color: #FFFEFE;
+    align-items: center;
+    justify-content: center;
+}
+
+.googleButton {
+    cursor: pointer;
+    padding: 5px;
+}
+.loginButton{
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: #0096FF;
+    margin-top: 40px;
+}
+
+.loginOptionBox {
+    color: #1976D2;
+    margin: 3px 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orDevider {
+    display: flex;
+    justify-content: center;
+}
+
+.socials{
+    margin: 30px 13px 10px 13px;
+}
