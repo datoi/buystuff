@@ -1,0 +1,17 @@
+.footer {
+
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orDevider {
+    display: flex;
+    justify-content: center;
+}
+
+.socials{
+    margin: 30px 13px 10px 13px;
+}

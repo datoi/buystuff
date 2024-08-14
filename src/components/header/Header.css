@@ -1,0 +1,89 @@
+header {
+    background-color: #FFFFFF;
+}
+li {
+    cursor: pointer;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400;
+}
+.navbar {
+    margin: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+
+.logoBox {
+    cursor: pointer;
+}
+
+.navbarOptionBox {
+    display: flex;
+}
+
+.navbarOption {
+    list-style: none;
+    margin: 0 40px;
+    padding:4px 4px;
+
+}
+.navbarOption:hover {
+    border-bottom:1px solid gray;
+}
+
+
+
+.navbar3magesBox {
+    display: flex;
+}
+
+.navbar3mages {
+    cursor: pointer;
+    margin: 0 25px;
+}
+.searchPopBox{
+    top: 10%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.searchPop {
+    background: url('../../assets/Magnifier.png') no-repeat 3px center white;
+    background-size: 16px 16px;
+    width: 580px;
+    height: 40px;
+    padding-left: 40px;  /* Space for the left image */
+    padding-right: 40px; /* Space for the right image */
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.searchPop::placeholder {
+    color: #888; /* Placeholder text color */
+    opacity: 0.7; /* Make sure the placeholder is fully opaque */
+}
+
+.exitIcon {
+    /*position: absolute;*/
+    /*right: 10px;*/
+    /*top: 50%;*/
+    /*transform: translateY(-50%);*/
+    /*width: 20px;  !* Adjust the width of the image *!*/
+    /*height: 20px; !* Adjust the height of the image *!*/
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the image */
+}
+
+.darkOver{
+    position: absolute;
+    background: black;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+}
+
+
