@@ -9,15 +9,21 @@ import {useState} from "react";
 
 
 const Header = () => {
+    const [popValue, setPopValue] = useState(false)
+
+    const [activeTab, setActiveTab] = useState('');
+
+    const handleTabClick = (tabName) => {
+        setActiveTab(tabName);
+    }
     const navigate = useNavigate()
-    const HomeSubmit = () => {
+    const HomeSubmit = (e) => {
         navigate("/");
     }
     const profileSubmit = () => {
         navigate("/login");
     }
 
-    const [popValue, setPopValue] = useState(false)
     const searchClick = () => {
         setPopValue(true)
     }
@@ -36,20 +42,56 @@ const Header = () => {
                     </div>
                 </div>:null}
 
+                (
                 <nav className='navbar'>
                     <div className='logoBox'>
                         <img src={WebCanvasLogo} alt="logo"/>
                     </div>
                     <div className='navbarOptionBox'>
-                        <li className='navbarOption' onClick={HomeSubmit}>Home</li>
-                        <li className='navbarOption'>Product</li>
-                        <li className='navbarOption'>About Us</li>
-                        <li className='navbarOption'>Contact</li>
+                        <li
+                            className={`navbarOption ${activeTab === 'home' ? 'active' : ''}`}
+                            onClick={() => { handleTabClick('home'); HomeSubmit(); }}
+                        >
+                            Home
+                        </li>
+                        <li
+                            className={`navbarOption ${activeTab === 'product' ? 'active' : ''}`}
+                            onClick={() => handleTabClick('product')}
+                        >
+                            Product
+                        </li>
+                        <li
+                            className={`navbarOption ${activeTab === 'about' ? 'active' : ''}`}
+                            onClick={() => handleTabClick('about')}
+                        >
+                            About Us
+                        </li>
+                        <li
+                            className={`navbarOption ${activeTab === 'contact' ? 'active' : ''}`}
+                            onClick={() => handleTabClick('contact')}
+                        >
+                            Contact
+                        </li>
                     </div>
                     <div className="navbar3magesBox">
-                        <div className='navbar3mages' onClick={searchClick}><img src={Magnifier} alt="magnifier"/></div>
-                        <div className='navbar3mages'><img src={Bag} alt="bag"/></div>
-                        <div className='navbar3mages' onClick={profileSubmit}><img src={Profile} alt="profile"/></div>
+                        <li
+                            className={`navbar3mages ${activeTab === 'search' ? 'active' : ''}`}
+                            onClick={() => { handleTabClick('search'); searchClick(); }}
+                        >
+                            <img src={Magnifier} alt="magnifier"/>
+                        </li>
+                        <li
+                            className={`navbar3mages ${activeTab === 'bag' ? 'active' : ''}`}
+                            onClick={() => handleTabClick('bag')}
+                        >
+                            <img src={Bag} alt="bag"/>
+                        </li>
+                        <li
+                            className={`navbar3mages ${activeTab === 'profile' ? 'active' : ''}`}
+                            onClick={() => { handleTabClick('profile'); profileSubmit(); }}
+                        >
+                            <img src={Profile} alt="profile"/>
+                        </li>
                     </div>
                 </nav>
 
