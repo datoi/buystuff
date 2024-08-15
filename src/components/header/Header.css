@@ -39,7 +39,15 @@ li {
     display: flex;
 }
 
+.navbarOption.active {
+    font-weight: bold;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+
 .navbar3mages {
+    list-style: none;
     cursor: pointer;
     margin: 0 25px;
 }
@@ -48,7 +56,7 @@ li {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
+    z-index: 999;
 }
 .searchPop {
     background: url('../../assets/Magnifier.png') no-repeat 3px center white;
