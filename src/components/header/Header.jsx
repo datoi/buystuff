@@ -101,7 +101,7 @@ const Header = () => {
                             <img className='navbar3mage' src={Profile} alt="profile" />
                         </li>
                     <div className='hamburgerMenu' onClick={toggleMenu}>
-                        <img alt="hamburger menu" />
+                        <img src={HamburgerIcon} alt="hamburger menu" />
                     </div>
                     </div>
                 </nav>
