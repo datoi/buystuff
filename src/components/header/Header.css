@@ -1,14 +1,20 @@
 header {
     background-color: #FFFFFF;
 }
+
+.webCanvasLogo {
+    width: 180px;
+}
+
 li {
     cursor: pointer;
     font-family: 'Inter', sans-serif !important;
     font-size: 14px;
     font-weight: 400;
 }
+
 .navbar {
-    margin: 0 120px;
+    margin: 0 10px;
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
@@ -25,14 +31,14 @@ li {
 
 .navbarOption {
     list-style: none;
-    margin: 0 40px;
-    padding:4px 4px;
+    margin: 0 10px;
+    padding: 4px 4px;
 
 }
+
 .navbarOption:hover {
-    border-bottom:1px solid gray;
+    border-bottom: 1px solid gray;
 }
-
 
 
 .navbar3magesBox {
@@ -49,22 +55,28 @@ li {
 .navbar3mages {
     list-style: none;
     cursor: pointer;
-    margin: 0 25px;
+    margin: 0 15px;
 }
-.searchPopBox{
+
+.navbar3mage {
+    width: 18px;
+}
+
+.searchPopBox {
     top: 10%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     z-index: 999;
 }
+
 .searchPop {
     background: url('../../assets/Magnifier.png') no-repeat 3px center white;
     background-size: 16px 16px;
     width: 580px;
     height: 40px;
-    padding-left: 40px;  /* Space for the left image */
-    padding-right: 40px; /* Space for the right image */
+    padding-left: 40px;
+    padding-right: 40px;
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
@@ -72,21 +84,15 @@ li {
 }
 
 .searchPop::placeholder {
-    color: #888; /* Placeholder text color */
-    opacity: 0.7; /* Make sure the placeholder is fully opaque */
+    color: #888;
+    opacity: 0.7;
 }
 
 .exitIcon {
-    /*position: absolute;*/
-    /*right: 10px;*/
-    /*top: 50%;*/
-    /*transform: translateY(-50%);*/
-    /*width: 20px;  !* Adjust the width of the image *!*/
-    /*height: 20px; !* Adjust the height of the image *!*/
-    cursor: pointer; /* Changes the cursor to a pointer when hovering over the image */
+    cursor: pointer;
 }
 
-.darkOver{
+.darkOver {
     position: absolute;
     background: black;
     height: 100%;
@@ -94,4 +100,67 @@ li {
     opacity: 0.6;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 
+.navbarOptionBox {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbarOptionBox {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.hamburgerMenu {
+    display: none;
+}
+
+@media (max-width: 690px) {
+    .webCanvasLogo {
+        width: 150px;
+    }
+
+    .navbarOptionBox {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+    }
+
+    .navbarOptionBox.active {
+        display: flex;
+    }
+
+    .hamburgerMenu {
+        display: block;
+        margin: 0 15px;
+    }
+
+    .bagIcon {
+        display: none;
+    }
+
+}
