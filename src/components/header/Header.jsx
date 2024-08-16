@@ -1,7 +1,7 @@
-import HamburgerIcon from "../../assets/HamburgerIcon.png"; // Add your hamburger icon here
+import HamburgerIcon from "../../assets/HamburgerIcon.png"
 import WebCanvasLogo from "../../assets/WebCanvasLogo.png";
 import Magnifier from "../../assets/Magnifier.png";
-import Bag from "../../assets/Bag.png"; // The bag icon will be hidden on smaller screens
+import Bag from "../../assets/Bag.png";
 import Profile from "../../assets/Profile.png";
 import Exit from '../../assets/Exit.png';
 import { useNavigate } from "react-router-dom";
