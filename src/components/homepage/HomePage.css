@@ -18,6 +18,8 @@
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding: 10px 100px 150px 100px;
+    justify-items: center;
+
 }
 
 .itemList {
