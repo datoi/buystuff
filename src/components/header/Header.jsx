@@ -1,7 +1,6 @@
-import HamburgerIcon from "../../assets/HamburgerIcon.png"; // Add your hamburger icon here
 import WebCanvasLogo from "../../assets/WebCanvasLogo.png";
 import Magnifier from "../../assets/Magnifier.png";
-import Bag from "../../assets/Bag.png"; // The bag icon will be hidden on smaller screens
+import Bag from "../../assets/Bag.png";
 import Profile from "../../assets/Profile.png";
 import Exit from '../../assets/Exit.png';
 import { useNavigate } from "react-router-dom";
@@ -102,7 +101,7 @@ const Header = () => {
                             <img className='navbar3mage' src={Profile} alt="profile" />
                         </li>
                     <div className='hamburgerMenu' onClick={toggleMenu}>
-                        <img src={HamburgerIcon} alt="hamburger menu" />
+                        <img alt="hamburger menu" />
                     </div>
                     </div>
                 </nav>
