@@ -2,14 +2,22 @@ import WebCanvasLogo from "../../assets/WebCanvasLogo.png";
 import Magnifier from "../../assets/Magnifier.png";
 import Bag from "../../assets/Bag.png";
 import Profile from "../../assets/Profile.png";
-import Exit from '../../assets/Exit.png'
-import {useNavigate} from "react-router-dom";
-import './Header.css'
-import {useState} from "react";
-
+import Exit from '../../assets/Exit.png';
+import { useNavigate } from "react-router-dom";
+import './Header.css';
+import { useState } from "react";
 
 const Header = () => {
-    const navigate = useNavigate()
+    const [popValue, setPopValue] = useState(false);
+    const [activeTab, setActiveTab] = useState('');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const handleTabClick = (tabName) => {
+        setActiveTab(tabName);
+        setIsMenuOpen(false);
+    }
+
+    const navigate = useNavigate();
     const HomeSubmit = () => {
         navigate("/");
     }
@@ -17,45 +25,90 @@ const Header = () => {
         navigate("/login");
     }
 
-    const [popValue, setPopValue] = useState(false)
     const searchClick = () => {
-        setPopValue(true)
+        setPopValue(true);
     }
 
     const ExitSearch = () => {
-        setPopValue(false)
+        setPopValue(false);
     }
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    }
+
     return (
         <>
             <header>
-                {popValue ? <div>
-                    <div className='darkOver'></div>
-                    <div className='searchPopBox'>
-                        <input className='searchPop' type="text" placeholder='Search'/>
-                        <img src={Exit} className="exitIcon" onClick={ExitSearch} alt="Icon"/>
+                {popValue ? (
+                    <div>
+                        <div className='darkOver'></div>
+                        <div className='searchPopBox'>
+                            <input className='searchPop' type="text" placeholder='Search' />
+                            <img src={Exit} className="exitIcon" onClick={ExitSearch} alt="Icon" />
+                        </div>
                     </div>
-                </div>:null}
+                ) : null}
 
                 <nav className='navbar'>
                     <div className='logoBox'>
-                        <img src={WebCanvasLogo} alt="logo"/>
+                        <img className='webCanvasLogo' src={WebCanvasLogo} alt="logo" />
                     </div>
-                    <div className='navbarOptionBox'>
-                        <li className='navbarOption' onClick={HomeSubmit}>Home</li>
-                        <li className='navbarOption'>Product</li>
-                        <li className='navbarOption'>About Us</li>
-                        <li className='navbarOption'>Contact</li>
+
+                    <div className={`navbarOptionBox ${isMenuOpen ? 'active' : ''}`}>
+                        <li
+                            className={`navbarOption ${activeTab === 'home' ? 'active' : ''}`}
+                            onClick={() => { handleTabClick('home'); HomeSubmit(); }}
+                        >
+                            Home
+                        </li>
+                        <li
+                            className={`navbarOption ${activeTab === 'product' ? 'active' : ''}`}
+                            onClick={() => handleTabClick('product')}
+                        >
+                            Product
+                        </li>
+                        <li
+                            className={`navbarOption ${activeTab === 'about' ? 'active' : ''}`}
+                            onClick={() => handleTabClick('about')}
+                        >
+                            About
+                        </li>
+                        <li
+                            className={`navbarOption ${activeTab === 'contact' ? 'active' : ''}`}
+                            onClick={() => handleTabClick('contact')}
+                        >
+                            Contact
+                        </li>
                     </div>
                     <div className="navbar3magesBox">
-                        <div className='navbar3mages' onClick={searchClick}><img src={Magnifier} alt="magnifier"/></div>
-                        <div className='navbar3mages'><img src={Bag} alt="bag"/></div>
-                        <div className='navbar3mages' onClick={profileSubmit}><img src={Profile} alt="profile"/></div>
+                        <li
+                            className={`navbar3mages ${activeTab === 'search' ? 'active' : ''}`}
+                            onClick={() => { handleTabClick('search'); searchClick(); }}
+                        >
+                            <img className='navbar3mage' src={Magnifier} alt="magnifier" />
+                        </li>
+                        <li
+                            className={`navbar3mages ${activeTab === 'bag' ? 'active' : ''} bagIcon`}
+                            onClick={() => handleTabClick('bag')}
+                        >
+                            <img className='navbar3mage' src={Bag} alt="bag" />
+                        </li>
+                        <li
+                            className={`navbar3mages ${activeTab === 'profile' ? 'active' : ''}`}
+                            onClick={() => { handleTabClick('profile'); profileSubmit(); }}
+                        >
+                            <img className='navbar3mage' src={Profile} alt="profile" />
+                        </li>
+                    <div className='hamburgerMenu' onClick={toggleMenu}>
+                        <img alt="hamburger menu" />
+                    </div>
                     </div>
                 </nav>
 
             </header>
         </>
-    )
+    );
 }
 
-export default Header
+export default Header;
