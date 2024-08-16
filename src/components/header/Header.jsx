@@ -1,4 +1,4 @@
-import HamburgerIcon from "../../assets/HamburgerIcon.png"
+import HamburgerIcon from "../../assets/HamburgerIcon.png";
 import WebCanvasLogo from "../../assets/WebCanvasLogo.png";
 import Magnifier from "../../assets/Magnifier.png";
 import Bag from "../../assets/Bag.png";
