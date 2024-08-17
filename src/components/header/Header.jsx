@@ -25,7 +25,9 @@ const Header = () => {
     const profileSubmit = () => {
         navigate("/login");
     }
-
+    const AboutSubmit = () => {
+        navigate("/About");
+    }
     const searchClick = () => {
         setPopValue(true);
     }
@@ -71,7 +73,7 @@ const Header = () => {
                         </li>
                         <li
                             className={`navbarOption ${activeTab === 'about' ? 'active' : ''}`}
-                            onClick={() => handleTabClick('about')}
+                            onClick={() => { handleTabClick('about'); AboutSubmit(); }}
                         >
                             About
                         </li>
