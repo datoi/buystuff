@@ -3,11 +3,6 @@ import glasses from '../../assets/glasses.png'
 import heart from '../../assets/heart.png'
 import bag from '../../assets/Bag.png'
 import './HomePage.css'
-import WebCanvasLogo from "../../assets/WebCanvasLogo.png";
-import Magnifier from "../../assets/Magnifier.png";
-import Bag from "../../assets/Bag.png";
-import Profile from "../../assets/Profile.png";
-import {useNavigate} from "react-router-dom";
 
 const HomePage = () => {
 
@@ -31,7 +26,7 @@ const HomePage = () => {
                         <div className='itemPriceBox'>
                             <h3 className='itemPrice'>$23.95</h3>
                         </div>
-                        <div className='itemDescriptionBo'>
+                        <div className='itemDescriptionBoxx'>
                             <p className='itemDescription'>Geometric Sunglasses</p>
                         </div>
                         <div className='itemButtonBox'>
@@ -51,7 +46,7 @@ const HomePage = () => {
                         <div className='itemPriceBox'>
                             <h3 className='itemPrice'>$23.95</h3>
                         </div>
-                        <div className='itemDescriptionBo'>
+                        <div className='itemDescriptionBoxx'>
                             <p className='itemDescription'>Geometric Sunglasses</p>
                         </div>
                         <div className='itemButtonBox'>
@@ -71,7 +66,7 @@ const HomePage = () => {
                         <div className='itemPriceBox'>
                             <h3 className='itemPrice'>$23.95</h3>
                         </div>
-                        <div className='itemDescriptionBo'>
+                        <div className='itemDescriptionBoxx'>
                             <p className='itemDescription'>Geometric Sunglasses</p>
                         </div>
                         <div className='itemButtonBox'>
@@ -91,7 +86,7 @@ const HomePage = () => {
                         <div className='itemPriceBox'>
                             <h3 className='itemPrice'>$23.95</h3>
                         </div>
-                        <div className='itemDescriptionBo'>
+                        <div className='itemDescriptionBoxx'>
                             <p className='itemDescription'>Geometric Sunglasses</p>
                         </div>
                         <div className='itemButtonBox'>
@@ -111,7 +106,7 @@ const HomePage = () => {
                         <div className='itemPriceBox'>
                             <h3 className='itemPrice'>$23.95</h3>
                         </div>
-                        <div className='itemDescriptionBo'>
+                        <div className='itemDescriptionBoxx'>
                             <p className='itemDescription'>Geometric Sunglasses</p>
                         </div>
                         <div className='itemButtonBox'>
@@ -131,7 +126,7 @@ const HomePage = () => {
                         <div className='itemPriceBox'>
                             <h3 className='itemPrice'>$23.95</h3>
                         </div>
-                        <div className='itemDescriptionBo'>
+                        <div className='itemDescriptionBoxx'>
                             <p className='itemDescription'>Geometric Sunglasses</p>
                         </div>
                         <div className='itemButtonBox'>
@@ -151,7 +146,7 @@ const HomePage = () => {
                         <div className='itemPriceBox'>
                             <h3 className='itemPrice'>$23.95</h3>
                         </div>
-                        <div className='itemDescriptionBo'>
+                        <div className='itemDescriptionBox'>
                             <p className='itemDescription'>Geometric Sunglasses</p>
                         </div>
                         <div className='itemButtonBox'>

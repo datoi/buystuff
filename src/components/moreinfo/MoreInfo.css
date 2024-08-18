@@ -1,0 +1,114 @@
+.shopNowBox{
+    display: flex;
+}
+.shopNowItemBigBox{
+    display: flex;
+    justify-content: center;
+}
+.visualCheckItem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-right: 100px;
+}
+
+.shopNowItemBig{
+    width: 28rem;
+}
+.shopNowItemSmallBox{
+    text-align: center;
+}
+.shopNowItemSmall{
+    width: 250px;
+}
+.countItemBox{
+    display: flex;
+    align-items: center;
+    width: 35px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+}
+.countItemButton{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 3px;
+}
+.countItemInput{
+    width: 7px;
+    border: none;
+    /*margin: 0 5px;*/
+}
+.ifBought{
+    display: flex;
+    align-items: center;
+}
+.infoPriceBox{
+
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+.infoPrice{
+    color: #CC2328;
+    margin-right: 10px;
+}
+.itemInfo {
+    display: grid;
+    gap: 20px; /* Optional: adjust spacing between items */
+    justify-items: center; /* Center items horizontally within their grid cells */
+}
+
+.itemInfo > div {
+    width: 100%; /* Ensure divs do not exceed container width */
+}
+
+
+.itemInfoButtonBox{
+    width: 315px;
+}
+.addToCartBox, .buyItNowBox{
+    margin: 10px 0;
+}
+.addToCart:hover{
+    background-color: #0096FF;
+    color: white;
+    transition: 0.3s;
+}
+.buyItNow:hover{
+    transition: 0.3s;
+    background-color: #34A853;
+    color: white;
+}
+.addToCart, .buyItNow{
+    font-weight: 700;
+    font-size: 14px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #0096FF;
+}
+.bagIcon{
+    margin-right: 8px;
+}
+.buyItNow{
+    border: 2px solid #34A853;
+}
+@media (max-width: 690px) {
+    .shopNowBox{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-items: center; /* Center items horizontally within their grid cells */
+        justify-content: center;
+        gap: 20px
+    }
+    .visualCheckItem{
+        margin: 0;
+    }
+
+}

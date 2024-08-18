@@ -6,6 +6,7 @@ import Header from "./components/header/Header.jsx";
 import Footer from "./components/footer/Footer.jsx";
 import './App.css'
 import AboutUs from "./components/aboutus/AboutUs.jsx";
+import Products from "./components/products/Products.jsx";
 
 
 export default App
@@ -20,6 +21,7 @@ function App() {
                 <Route path='/' element={<HomePage/>}/>
                 <Route path='/login' element={<Login/>}/>
                 <Route path='/About' element={<AboutUs/>}/>
+                <Route path='/products' element={<Products/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>
