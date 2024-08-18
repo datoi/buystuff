@@ -28,6 +28,9 @@ const Header = () => {
     const AboutSubmit = () => {
         navigate("/About");
     }
+    const ProductSubmit = () => {
+        navigate('/products')
+    }
     const searchClick = () => {
         setPopValue(true);
     }
@@ -67,7 +70,7 @@ const Header = () => {
                         </li>
                         <li
                             className={`navbarOption ${activeTab === 'product' ? 'active' : ''}`}
-                            onClick={() => handleTabClick('product')}
+                            onClick={() => {handleTabClick('product'); ProductSubmit()}}
                         >
                             Product
                         </li>
