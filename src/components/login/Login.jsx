@@ -1,10 +1,36 @@
+import React, { useState } from 'react';
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { FaRegEyeSlash } from "react-icons/fa";
 import './Login.css'
-
 import GoogleLogo from '../../assets/GoogleLogo.png';
 
 
 
 const Login = () => {
+
+        const [email,setEmail] = useState("");
+        const [emailError,setEmailError] = useState(true);
+        
+        const handleEmailChange = (e)=>{
+            const value = e.target.value
+            setEmail(value);
+            if(value.endsWith("@gmail.com")){
+                setEmailError(true);
+            }else{
+                setEmailError(false);
+            }
+        }
+
+        const [hidePassword,setHidePassword] = useState("")
+        const [showPassword,setShowPassword] = useState(false)
+
+        const handleHidePassword = (e)=>{
+            setHidePassword(e.target.value)
+        }
+        const handleShowPassword = (e)=>{
+            setShowPassword(!showPassword)
+        }
+
     return (
         <div className='page'>
             <div className='body'>
@@ -24,10 +50,21 @@ const Login = () => {
                         </div>
                     </div>
                     <div className="emailInputBox">
-                        <input className='emailInput' placeholder="Email" type="text"/>
+                        <input className='emailInput' placeholder="Email" type="text"
+                        value={email} 
+                        onChange={handleEmailChange}
+                        style={{borderColor: emailError ? "":"red",outline:emailError ? "":"red"}}
+                        />
                     </div>
                     <div className='passwordInputBox'>
-                        <input className='passwordInput' placeholder='Password' type="text"/>
+                        <input className='passwordInput' placeholder='Password'
+                         type={showPassword ? "text":"password"}
+                         value={hidePassword}
+                         onChange={handleHidePassword}
+                        />
+                        <div className='password-eye' onClick={handleShowPassword} >
+                        {showPassword ?<MdOutlineRemoveRedEye fontSize={25} />:<FaRegEyeSlash fontSize={25}/>}
+                        </div>
                     </div>
                     <div className='loginOptionBox'>
                         <div>
