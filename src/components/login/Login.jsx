@@ -9,15 +9,16 @@ const Login = () => {
 
     const [email,setEmail] = useState("")
     const [emailValid,setEmailValid] = useState(true)
-    const isValidEmail = (e)=>{
-        const value = e.target.value;
-        setEmail(value)
-        if(value.endsWith("@gmail.com")){
-            setEmailValid(true)
-        }else{
-            setEmailValid(false)
-        }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const validateEmail = (value) => {
+    setEmail(value);
+    if (emailRegex.test(value)) {
+      setEmailValid(true);
+    } else {
+      setEmailValid(false);
     }
+  };
     
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -47,10 +48,9 @@ const Login = () => {
                     <div className="emailInputBox">
                         <input className='emailInput' placeholder="Email" type="text"
                         value={email}
-                        onChange={isValidEmail}
+                        onChange={(e) => validateEmail(e.target.value)}
                         style={{
-                            borderColor: emailValid ? "":"red",
-                            outline: emailValid ? "":"red"
+                          borderColor: emailValid ? "" : "red",
                         }}
                         />
                     </div>
