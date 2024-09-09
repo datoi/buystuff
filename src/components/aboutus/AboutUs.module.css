@@ -1,172 +1,186 @@
-.about{
+.about {
     background-color: #FFFFFF;
     width: 100%;
 }
-.background-image img{
+
+.backgroundImage {
+    position: relative;
     width: 100%;
 }
-.background-image h1{
+
+.backgroundImage img {
+    width: 100%;
+}
+
+.backgroundImage h1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(50%,-50%);
+    transform: translate(50%, -50%);
     font-size: 4.3rem;
     color: rgba(255, 254, 254, 1);
     text-shadow: -8px 0 6px rgb(4, 0, 59);
 }
-.glasses-container{
+
+.glassesContainer {
     display: flex;
 }
-.glasses-container img{
+
+.glassesContainer img {
     width: 500px;
     margin: 70px 120px;
 }
-.glasses-container p{
+
+.glassesContainer p {
     width: 495px;
     font-size: 1.6rem;
     margin: 70px -50px;
     color: rgba(72, 72, 72, 1);
 }
-.sunglasses-container{
+
+.sunglassesContainer {
     display: flex;
 }
-.sunglasses-container img{
+
+.sunglassesContainer img {
     width: 500px;
     margin: 70px -50px;
 }
-.sunglasses-container p{
+
+.sunglassesContainer p {
     width: 500px;
     font-size: 1.6rem;
     margin: 70px 120px;
     color: rgba(72, 72, 72, 1);
 }
-.sunglasses-container p a{
+
+.sunglassesContainer p a {
     color: rgba(72, 72, 72, 1);
 }
 
-
-@media screen and (max-width: 1000px){
-    .background-image h1{
+@media screen and (max-width: 1000px) {
+    .backgroundImage h1 {
         top: 35%;
         font-size: 4.2rem;
     }
-    .glasses-container img{
+    .glassesContainer img {
         width: 400px;
         margin-left: 50px;
     }
-    .glasses-container p{
+    .glassesContainer p {
         width: 395px;
         font-size: 1.3rem;
     }
-    .sunglasses-container img{
+    .sunglassesContainer img {
         width: 400px;
     }
-    .sunglasses-container p{
+    .sunglassesContainer p {
         width: 395px;
         font-size: 1.3rem;
         margin-left: 50px;
     }
-    
 }
-@media screen and (max-width: 950px){
-    .background-image h1{
+
+@media screen and (max-width: 950px) {
+    .backgroundImage h1 {
         top: 35%;
         font-size: 3.5rem;
     }
-    .glasses-container img{
+    .glassesContainer img {
         width: 390px;
         margin-left: 40px;
     }
-    .glasses-container p{
+    .glassesContainer p {
         width: 385px;
         font-size: 1.2rem;
     }
-    .sunglasses-container img{
+    .sunglassesContainer img {
         width: 390px;
     }
-    .sunglasses-container p{
+    .sunglassesContainer p {
         width: 395px;
         font-size: 1.2rem;
         margin-left: 40px;
     }
 }
-@media screen and (max-width: 900px){
-    .background-image h1{
+
+@media screen and (max-width: 900px) {
+    .backgroundImage h1 {
         top: 35%;
         font-size: 3.5rem;
     }
-    .glasses-container img{
+    .glassesContainer img {
         width: 370px;
         margin-left: 30px;
     }
-    .glasses-container p{
+    .glassesContainer p {
         width: 375px;
         font-size: 1rem;
     }
-    .sunglasses-container img{
+    .sunglassesContainer img {
         width: 370px;
     }
-    .sunglasses-container p{
+    .sunglassesContainer p {
         width: 375px;
         font-size: 1rem;
         margin-left: 30px;
     }
 }
 
-@media screen and (max-width: 830px){
-    .background-image h1{
+@media screen and (max-width: 830px) {
+    .backgroundImage h1 {
         top: 35%;
         font-size: 3rem;
     }
-    .glasses-container img{
+    .glassesContainer img {
         width: 450px;
         margin: 250px auto;
         margin-bottom: 0;
     }
-    .glasses-container p{
+    .glassesContainer p {
         position: absolute;
         width: 90%;
         left: 90px;
         justify-content: center;
         font-size: 1.2rem;
     }
-    .sunglasses-container img{
+    .sunglassesContainer img {
         width: 450px;
         margin: 250px auto;
         margin-bottom: 150px;
     }
-    .sunglasses-container p{
+    .sunglassesContainer p {
         position: absolute;
         width: 90%;
         left: 10px;
         justify-content: center;
         font-size: 1.2rem;
     }
-    
 }
-@media screen and (max-width: 690px){
-    .background-image h1{
+
+@media screen and (max-width: 690px) {
+    .backgroundImage h1 {
         top: 33%;
         font-size: 2.5rem;
     }
-    .glasses-container img{
+    .glassesContainer img {
         width: 400px;
         margin: 300px auto;
         margin-bottom: 0;
     }
-    .glasses-container p{
+    .glassesContainer p {
         position: absolute;
         width: 90%;
         left: 90px;
         justify-content: center;
         font-size: 1.2rem;
     }
-    .sunglasses-container img{
+    .sunglassesContainer img {
         width: 400px;
         margin: 250px auto;
         margin-bottom: 100px;
     }
-    .sunglasses-container p{
+    .sunglassesContainer p {
         position: absolute;
         width: 90%;
         justify-content: center;

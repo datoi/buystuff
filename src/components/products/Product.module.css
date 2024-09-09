@@ -1,0 +1,141 @@
+.seeMoreBox {
+    display: flex;
+    justify-content: center;
+}
+.seeMore{
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+li {
+    cursor: pointer;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.listNav {
+    display: grid;
+    justify-content: center;
+}
+
+.productBody {
+    background: white;
+}
+
+.listBarBox {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+    padding: 40px 0;
+}
+
+.barOption {
+    padding: 0 30px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.bestSeller {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 690px) {
+    .listBarBox {
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .bestSeller {
+        grid-column: span 4;
+        justify-self: start;
+    }
+
+    .barOption {
+        padding: 0 10px;
+    }
+}
+
+
+
+
+
+
+
+.homeTitle {
+    opacity: 0.55;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.slide {
+    width: 100%;
+}
+
+.homeBody {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.itemListBox {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-bottom: 80px;
+    justify-items: center;
+}
+
+.itemList {
+    width: 265px;
+}
+
+.itemOption {
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.heart {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.bag {
+    cursor: pointer;
+}
+
+.itemImage {
+    display: flex;
+    justify-content: center;
+}
+
+.itemPrice {
+    color: #CC2328;
+    margin-bottom: 7px;
+}
+
+.itemDescription {
+    margin: 0 0 20px 0;
+    color: #000000;
+    font-weight: 700;
+}
+
+.itemButtonBox {
+    width: 166px;
+    height: 36px;
+}
+
+.itemButton {
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #0096FF;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.itemButton:hover {
+    transition: 0.3s;
+    background: #0096FF;
+}

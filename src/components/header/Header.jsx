@@ -1,12 +1,12 @@
-import HamburgerIcon from "../../assets/HamburgerIcon.png";
-import WebCanvasLogo from "../../assets/WebCanvasLogo.png";
-import Magnifier from "../../assets/Magnifier.png";
-import Bag from "../../assets/Bag.png";
-import Profile from "../../assets/Profile.png";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './Header.module.css';
+import HamburgerIcon from '../../assets/HamburgerIcon.png';
+import WebCanvasLogo from '../../assets/WebCanvasLogo.png';
+import Magnifier from '../../assets/Magnifier.png';
+import Bag from '../../assets/Bag.png';
+import Profile from '../../assets/Profile.png';
 import Exit from '../../assets/Exit.png';
-import { useNavigate } from "react-router-dom";
-import './Header.css';
-import { useState } from "react";
 
 const Header = () => {
     const [popValue, setPopValue] = useState(false);
@@ -29,7 +29,7 @@ const Header = () => {
         navigate("/About");
     }
     const ProductSubmit = () => {
-        navigate('/products')
+        navigate('/products');
     }
     const searchClick = () => {
         setPopValue(true);
@@ -45,73 +45,72 @@ const Header = () => {
 
     return (
         <>
-            <header>
+            <header className={styles.header}>
                 {popValue ? (
                     <div>
-                        <div className='darkOver'></div>
-                        <div className='searchPopBox'>
-                            <input className='searchPop' type="text" placeholder='Search' />
-                            <img src={Exit} className="exitIcon" onClick={ExitSearch} alt="Icon" />
+                        <div className={styles.darkOver}></div>
+                        <div className={styles.searchPopBox}>
+                            <input className={styles.searchPop} type="text" placeholder='Search' />
+                            <img src={Exit} className={styles.exitIcon} onClick={ExitSearch} alt="Icon" />
                         </div>
                     </div>
                 ) : null}
 
-                <nav className='navbar'>
-                    <div className='logoBox'>
-                        <img className='webCanvasLogo' src={WebCanvasLogo} alt="logo" />
+                <nav className={styles.navbar}>
+                    <div className={styles.logoBox} onClick={HomeSubmit}>
+                        <img className={styles.webCanvasLogo} src={WebCanvasLogo} alt="logo" />
                     </div>
 
-                    <div className={`navbarOptionBox ${isMenuOpen ? 'active' : ''}`}>
+                    <div className={`${styles.navbarOptionBox} ${isMenuOpen ? styles.active : ''}`}>
                         <li
-                            className={`navbarOption ${activeTab === 'home' ? 'active' : ''}`}
+                            className={`${styles.navbarOption} ${activeTab === 'home' ? styles.active : ''}`}
                             onClick={() => { handleTabClick('home'); HomeSubmit(); }}
                         >
                             Home
                         </li>
                         <li
-                            className={`navbarOption ${activeTab === 'product' ? 'active' : ''}`}
-                            onClick={() => {handleTabClick('product'); ProductSubmit()}}
+                            className={`${styles.navbarOption} ${activeTab === 'product' ? styles.active : ''}`}
+                            onClick={() => { handleTabClick('product'); ProductSubmit(); }}
                         >
                             Product
                         </li>
                         <li
-                            className={`navbarOption ${activeTab === 'about' ? 'active' : ''}`}
+                            className={`${styles.navbarOption} ${activeTab === 'about' ? styles.active : ''}`}
                             onClick={() => { handleTabClick('about'); AboutSubmit(); }}
                         >
                             About
                         </li>
                         <li
-                            className={`navbarOption ${activeTab === 'contact' ? 'active' : ''}`}
+                            className={`${styles.navbarOption} ${activeTab === 'contact' ? styles.active : ''}`}
                             onClick={() => handleTabClick('contact')}
                         >
                             Contact
                         </li>
                     </div>
-                    <div className="navbar3magesBox">
+                    <div className={styles.navbar3magesBox}>
                         <li
-                            className={`navbar3mages ${activeTab === 'search' ? 'active' : ''}`}
+                            className={`${styles.navbar3mages} ${activeTab === 'search' ? styles.active : ''}`}
                             onClick={() => { handleTabClick('search'); searchClick(); }}
                         >
-                            <img className='navbar3mage' src={Magnifier} alt="magnifier" />
+                            <img className={styles.navbar3mage} src={Magnifier} alt="magnifier" />
                         </li>
                         <li
-                            className={`navbar3mages ${activeTab === 'bag' ? 'active' : ''} bagIcon`}
+                            className={`${styles.navbar3mages} ${activeTab === 'bag' ? styles.active : ''}`}
                             onClick={() => handleTabClick('bag')}
                         >
-                            <img className='navbar3mage' src={Bag} alt="bag" />
+                            <img className={styles.navbar3mage} src={Bag} alt="bag" />
                         </li>
                         <li
-                            className={`navbar3mages ${activeTab === 'profile' ? 'active' : ''}`}
+                            className={`${styles.navbar3mages} ${activeTab === 'profile' ? styles.active : ''}`}
                             onClick={() => { handleTabClick('profile'); profileSubmit(); }}
                         >
-                            <img className='navbar3mage' src={Profile} alt="profile" />
+                            <img className={styles.navbar3mage} src={Profile} alt="profile" />
                         </li>
-                    <div className='hamburgerMenu' onClick={toggleMenu}>
-                        <img src={HamburgerIcon} alt="hamburger menu" />
-                    </div>
+                        <div className={styles.hamburgerMenu} onClick={toggleMenu}>
+                            <img src={HamburgerIcon} alt="hamburger menu" />
+                        </div>
                     </div>
                 </nav>
-
             </header>
         </>
     );

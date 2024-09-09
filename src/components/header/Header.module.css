@@ -1,4 +1,4 @@
-header {
+.header {
     background-color: #FFFFFF;
 }
 
@@ -27,19 +27,19 @@ li {
 
 .navbarOptionBox {
     display: flex;
+    list-style-type: none;
+    gap: 20px;
 }
 
 .navbarOption {
     list-style: none;
     margin: 0 10px;
     padding: 4px 4px;
-
 }
 
 .navbarOption:hover {
     border-bottom: 1px solid gray;
 }
-
 
 .navbar3magesBox {
     display: flex;
@@ -50,7 +50,6 @@ li {
     color: #000000;
     border-bottom: 2px solid #000000;
 }
-
 
 .navbar3mages {
     list-style: none;
@@ -80,7 +79,6 @@ li {
     box-sizing: border-box;
     border: none;
     border-radius: 5px;
-
 }
 
 .searchPop::placeholder {
@@ -98,32 +96,6 @@ li {
     height: 100%;
     width: 100%;
     opacity: 0.6;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.navbarOptionBox {
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-
-.navbarOptionBox {
-    display: flex;
-    list-style-type: none;
-    gap: 20px;
 }
 
 .hamburgerMenu {
@@ -162,5 +134,4 @@ li {
     .bagIcon {
         display: none;
     }
-
 }

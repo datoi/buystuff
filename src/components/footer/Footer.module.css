@@ -1,0 +1,26 @@
+.footer {
+    margin-top: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials {
+    margin: 30px 13px 10px 13px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    width: 300px;
+}
+
+.logoContainer {
+    margin-bottom: 20px;
+}
+
+.socialsContainer {
+    margin-top: 20px;
+}

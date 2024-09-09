@@ -37,14 +37,12 @@
 .countItemInput{
     width: 7px;
     border: none;
-    /*margin: 0 5px;*/
 }
 .ifBought{
     display: flex;
     align-items: center;
 }
 .infoPriceBox{
-
     height: 20px;
     display: flex;
     align-items: center;
@@ -55,14 +53,13 @@
 }
 .itemInfo {
     display: grid;
-    gap: 20px; /* Optional: adjust spacing between items */
-    justify-items: center; /* Center items horizontally within their grid cells */
+    gap: 20px;
+    justify-items: center;
 }
 
 .itemInfo > div {
-    width: 100%; /* Ensure divs do not exceed container width */
+    width: 100%;
 }
-
 
 .itemInfoButtonBox{
     width: 315px;
@@ -103,12 +100,11 @@
     .shopNowBox{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        justify-items: center; /* Center items horizontally within their grid cells */
+        justify-items: center;
         justify-content: center;
-        gap: 20px
+        gap: 20px;
     }
     .visualCheckItem{
         margin: 0;
     }
-
 }

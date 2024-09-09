@@ -1,6 +1,6 @@
-import './Product.css'
+import styles from './Product.module.css'
 import downArrow from '../../assets/DownArrow.png'
-import {useState} from "react";
+import { useState } from "react";
 import MoreInfo from "../moreinfo/MoreInfo.jsx";
 import heart from "../../assets/heart.png"
 import bag from "../../assets/Bag.png"
@@ -13,160 +13,88 @@ const Products = () => {
     }
 
     return (
-        <div className='productBody'>
-            <nav className='listNav'>
-                <div className='listBarBox'>
-                    <li className='barOption'>Fashion</li>
-                    <li className='barOption'>Classic</li>
-                    <li className='barOption'>Retro</li>
-                    <li className='barOption'>Computer/Vision</li>
-                    <li className='barOption bestSeller'>Best Sellers <img className='downArrow' src={downArrow}
-                                                                           alt=""/></li>
+        <div className={styles.productBody}>
+            <nav className={styles.listNav}>
+                <div className={styles.listBarBox}>
+                    <li className={styles.barOption}>Fashion</li>
+                    <li className={styles.barOption}>Classic</li>
+                    <li className={styles.barOption}>Retro</li>
+                    <li className={styles.barOption}>Computer/Vision</li>
+                    <li className={`${styles.barOption} ${styles.bestSeller}`}>
+                        Best Sellers <img className={styles.downArrow} src={downArrow} alt=""/>
+                    </li>
                 </div>
             </nav>
-            <div className='itemListBox'>
-                {shopNow ?
-                    <div className='moreInfoBox'>
-                        <MoreInfo/>
-                        <div className='seeMoreBox'>
-                            <h1 className='seeMore'>See More</h1>
+            <div className={styles.itemListBox}>
+                {shopNow ? (
+                    <div className={styles.moreInfoBox}>
+                        <MoreInfo />
+                        <div className={styles.seeMoreBox}>
+                            <h1 className={styles.seeMore}>See More</h1>
                         </div>
-                        <hr style={{width: '190px', opacity: '0.6'}}/>
-                        <div className='itemListBox'>
-                            <div className='itemList'>
-                                <div className="itemOption">
-                                    <div className='heart'><img src={heart} alt=""/></div>
-                                    <div className='bag'><img src={bag} alt=""/></div>
-                                </div>
-                                <div className='itemImage'>
-                                    <img src={RayBan} alt=""/>
-                                </div>
-                                <div className='itemInfo'>
-                                    <div className='itemPriceBox'>
-                                        <h3 className='itemPrice'>$23.95</h3>
+                        <hr style={{ width: '190px', opacity: '0.6' }} />
+                        <div className={styles.itemListBox}>
+                            {[...Array(3)].map((_, index) => (
+                                <div className={styles.itemList} key={index}>
+                                    <div className={styles.itemOption}>
+                                        <div className={styles.heart}>
+                                            <img src={heart} alt="Heart icon"/>
+                                        </div>
+                                        <div className={styles.bag}>
+                                            <img src={bag} alt="Bag icon"/>
+                                        </div>
                                     </div>
-                                    <div className='itemDescriptionBoxx'>
-                                        <p className='itemDescription'>Geometric Sunglasses</p>
+                                    <div className={styles.itemImage}>
+                                        <img src={RayBan} alt="Ray-Ban sunglasses"/>
                                     </div>
-                                    <div className='itemButtonBox'>
-                                        <button onClick={shopNowClick} className='itemButton'>Shop Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='itemList'>
-                                <div className="itemOption">
-                                    <div className='heart'><img src={heart} alt=""/></div>
-                                    <div className='bag'><img src={bag} alt=""/></div>
-                                </div>
-                                <div className='itemImage'>
-                                    <img src={RayBan} alt=""/>
-                                </div>
-                                <div className='itemInfo'>
-                                    <div className='itemPriceBox'>
-                                        <h3 className='itemPrice'>$23.95</h3>
-                                    </div>
-                                    <div className='itemDescriptionBoxx'>
-                                        <p className='itemDescription'>Geometric Sunglasses</p>
-                                    </div>
-                                    <div className='itemButtonBox'>
-                                        <button onClick={shopNowClick} className='itemButton'>Shop Now</button>
+                                    <div className={styles.itemInfo}>
+                                        <div className={styles.itemPriceBox}>
+                                            <h3 className={styles.itemPrice}>$23.95</h3>
+                                        </div>
+                                        <div className={styles.itemDescriptionBoxx}>
+                                            <p className={styles.itemDescription}>Geometric Sunglasses</p>
+                                        </div>
+                                        <div className={styles.itemButtonBox}>
+                                            <button onClick={shopNowClick} className={styles.itemButton}>Shop Now</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className='itemList'>
-                                <div className="itemOption">
-                                    <div className='heart'><img src={heart} alt=""/></div>
-                                    <div className='bag'><img src={bag} alt=""/></div>
-                                </div>
-                                <div className='itemImage'>
-                                    <img src={RayBan} alt=""/>
-                                </div>
-                                <div className='itemInfo'>
-                                    <div className='itemPriceBox'>
-                                        <h3 className='itemPrice'>$23.95</h3>
-                                    </div>
-                                    <div className='itemDescriptionBoxx'>
-                                        <p className='itemDescription'>Geometric Sunglasses</p>
-                                    </div>
-                                    <div className='itemButtonBox'>
-                                        <button onClick={shopNowClick} className='itemButton'>Shop Now</button>
-                                    </div>
-                                </div>
-                            </div>
+                            ))}
                         </div>
-
                     </div>
-                    :
+                ) : (
                     <>
-                        <div className='itemList'>
-                            <div className="itemOption">
-                                <div className='heart'><img src={heart} alt=""/></div>
-                                <div className='bag'><img src={bag} alt=""/></div>
-                            </div>
-                            <div className='itemImage'>
-                                <img src={RayBan} alt=""/>
-                            </div>
-                            <div className='itemInfo'>
-                                <div className='itemPriceBox'>
-                                    <h3 className='itemPrice'>$23.95</h3>
+                        {[...Array(3)].map((_, index) => (
+                            <div className={styles.itemList} key={index}>
+                                <div className={styles.itemOption}>
+                                    <div className={styles.heart}>
+                                        <img src={heart} alt="Heart icon"/>
+                                    </div>
+                                    <div className={styles.bag}>
+                                        <img src={bag} alt="Bag icon"/>
+                                    </div>
                                 </div>
-                                <div className='itemDescriptionBoxx'>
-                                    <p className='itemDescription'>Geometric Sunglasses</p>
+                                <div className={styles.itemImage}>
+                                    <img src={RayBan} alt="Ray-Ban sunglasses"/>
                                 </div>
-                                <div className='itemButtonBox'>
-                                    <button onClick={shopNowClick} className='itemButton'>Shop Now</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='itemList'>
-                            <div className="itemOption">
-                                <div className='heart'><img src={heart} alt=""/></div>
-                                <div className='bag'><img src={bag} alt=""/></div>
-                            </div>
-                            <div className='itemImage'>
-                                <img src={RayBan} alt=""/>
-                            </div>
-                            <div className='itemInfo'>
-                                <div className='itemPriceBox'>
-                                    <h3 className='itemPrice'>$23.95</h3>
-                                </div>
-                                <div className='itemDescriptionBoxx'>
-                                    <p className='itemDescription'>Geometric Sunglasses</p>
-                                </div>
-                                <div className='itemButtonBox'>
-                                    <button onClick={shopNowClick} className='itemButton'>Shop Now</button>
+                                <div className={styles.itemInfo}>
+                                    <div className={styles.itemPriceBox}>
+                                        <h3 className={styles.itemPrice}>$23.95</h3>
+                                    </div>
+                                    <div className={styles.itemDescriptionBoxx}>
+                                        <p className={styles.itemDescription}>Geometric Sunglasses</p>
+                                    </div>
+                                    <div className={styles.itemButtonBox}>
+                                        <button onClick={shopNowClick} className={styles.itemButton}>Shop Now</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className='itemList'>
-                            <div className="itemOption">
-                                <div className='heart'><img src={heart} alt=""/></div>
-                                <div className='bag'><img src={bag} alt=""/></div>
-                            </div>
-                            <div className='itemImage'>
-                                <img src={RayBan} alt=""/>
-                            </div>
-                            <div className='itemInfo'>
-                                <div className='itemPriceBox'>
-                                    <h3 className='itemPrice'>$23.95</h3>
-                                </div>
-                                <div className='itemDescriptionBoxx'>
-                                    <p className='itemDescription'>Geometric Sunglasses</p>
-                                </div>
-                                <div className='itemButtonBox'>
-                                    <button onClick={shopNowClick} className='itemButton'>Shop Now</button>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </>
-
-                }
-
-
+                )}
             </div>
         </div>
-
     )
 }
 
-export default Products
+export default Products;

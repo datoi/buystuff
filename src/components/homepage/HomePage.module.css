@@ -19,7 +19,6 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     padding-bottom: 80px;
     justify-items: center;
-
 }
 
 .itemList {
@@ -70,10 +69,19 @@
     border-radius: 5px;
     width: 100%;
     height: 100%;
-
 }
 
 .itemButton:hover {
     transition: 0.3s;
     background: #0096FF;
+}
+
+.seeMoreBox {
+    display: flex;
+    justify-content: center;
+}
+
+.seeMore {
+    font-weight: 400;
+    opacity: 0.6;
 }
